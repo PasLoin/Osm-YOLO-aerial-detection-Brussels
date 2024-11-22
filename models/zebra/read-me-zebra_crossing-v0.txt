@@ -1,3 +1,0 @@
-This model was generated using a limited dataset of 170 images with crossing:markings"="zebra" based on UrbIs Aerial imagery 2023. It's a combinaison of Yolo5 , Yolo11 custom training (best reinforcement) in order to accelarate annotation process. Validation data was limited to 2 images and metrics are irrelevant for the use case.
-
-Don't re-use it for training, will publish best model in the following day with the complete description of the worflow used.
