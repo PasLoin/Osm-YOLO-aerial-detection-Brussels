@@ -6,4 +6,4 @@ Recall (R)	0.912
 mAP@50	0.959
 mAP@50-95	0.674
 
-Complet training and outpour : https://www.kaggle.com/code/raphpulp/zebra-700-train-zebra-crossing-using-yolo11
+Complet training and outpout : https://www.kaggle.com/code/raphpulp/zebra-700-train-zebra-crossing-using-yolo11
