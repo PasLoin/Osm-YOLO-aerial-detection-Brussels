@@ -1,0 +1,9 @@
+Traffic calming cushion v1 Model Metrics
+
+Metric	Value
+Precision (P)	0.965
+Recall (R)	0.951
+mAP@50	0.983
+mAP@50-95	0.849
+
+Complet training and outpout : https://www.kaggle.com/code/raphpulp/train-cushion-630-yolo11s
