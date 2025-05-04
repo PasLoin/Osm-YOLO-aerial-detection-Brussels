@@ -7,3 +7,12 @@ mAP@50	0.983
 mAP@50-95	0.849
 
 Complet training and outpout : https://www.kaggle.com/code/raphpulp/train-cushion-630-yolo11s
+
+
+####### WARNING ########
+
+Metrics are given by the Val of Yolo training and are given for comparaison purpose for your own training.
+
+This model generate false positive (espectialy with some manhole that are sorounded by cementery)
+
+Use with caution and alway make manual check before editing data in OSM (from aerial AND from Streetlevel imagery)
