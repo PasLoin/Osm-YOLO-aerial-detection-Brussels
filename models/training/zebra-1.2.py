@@ -19,6 +19,6 @@ train_results = model.train(
     lr0=0.008, # Légèrement inférieur au défaut (~0.01)
     lrf=0.1    # Le LR final sera lr0 * lrf. Défaut est souvent 0.01    
 )
-/kaggle/input/
+
 # Evaluate model performance on the validation set
 metrics = model.val()
