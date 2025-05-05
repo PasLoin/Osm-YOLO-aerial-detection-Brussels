@@ -166,7 +166,7 @@ def process_detections(num_tiles_x, num_tiles_y, bbox_data, tiles, batch_size=10
             if element['type'] == 'node':
                 existing_nodes.append({'id': element['id'], 'lat': element['lat'], 'lon': element['lon']})
 
-    # Process results and create JOSM XML for each detected cushion
+    # Process results and create JOSM XML for each detected zebra
     for batch_start in range(0, len(tiles), batch_size):
         batch_end = min(batch_start + batch_size, len(tiles))
         batch_tiles = tiles[batch_start:batch_end]
@@ -225,8 +225,8 @@ def process_detections(num_tiles_x, num_tiles_y, bbox_data, tiles, batch_size=10
                     center_lat = (min_lat + max_lat) / 2
                     center_lon = (min_lon + max_lon) / 2
 
-                    # Print the latitude and longitude of the detected cushion's centroid
-                    print(f"Detected cushion centroid: Latitude = {center_lat}, Longitude = {center_lon}")
+                    # Print the latitude and longitude of the detected zebra's centroid
+                    print(f"Detected zebra centroid: Latitude = {center_lat}, Longitude = {center_lon}")
 
                     # Calculate Haversine distance to each existing node
                     min_distance = float('inf')
@@ -256,7 +256,7 @@ def process_detections(num_tiles_x, num_tiles_y, bbox_data, tiles, batch_size=10
                                 "task_id": f"task_{len(all_detections) + 1}",
                                 "task_description": "Verify if we can add infos",
                                 "task_instructions": "Verify task instruction.",
-                                "task_tags": ["traffic_calming", "cushion"],
+                                "task_tags": ["traffic_calming", "zebra"],
                                 "distance": min_distance
                             }
                         })
@@ -300,7 +300,7 @@ def process_detections(num_tiles_x, num_tiles_y, bbox_data, tiles, batch_size=10
     detections_less_than_10m = [detection for detection in all_detections if detection['properties']['distance'] < 10]
     detections_more_than_10m = [detection for detection in all_detections if detection['properties']['distance'] >= 10]
 
-    # Create the JOSM XML file for detected cushions
+    # Create the JOSM XML file for detected zebras
     create_josm_xml(all_detections)
 
     # Create the GeoJSON files for MapRoulette challenge
